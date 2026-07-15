@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Outfit, sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.card {
+  width: 330px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card__images {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__image {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.card__images-layer {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 255, 247, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card__images:hover .card__images-layer {
+  opacity: 1;
+}
+
+.card__title h1 {
+  margin-top: 22px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.card__title h1:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.card__title p {
+  margin-top: 18px;
+  color: hsl(215, 51%, 70%);
+  line-height: 1.6;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.card__time {
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__time-left,
+.card__time-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card__time-left span {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+
+.card__time-right span {
+  color: hsl(215, 51%, 70%);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.card__creator {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card__creator img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.card__creator p {
+  color: hsl(215, 51%, 70%);
+}
+
+.card__creator span {
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.card__creator span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+  margin-top: 25px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(178, 100%, 50%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
